@@ -23,8 +23,7 @@ class Homepage
     public function show()
     {
         $data = [
-            'name'      => $this->request->query->get('name', 'Stranger'),
-            //'menuItems' => [ [ 'href' => '/', 'text' => 'Homepage' ] ],
+            'name' => $this->request->query->get('name', 'Stranger'),
         ];
 
         $html = $this->renderer->render('home', $data);
