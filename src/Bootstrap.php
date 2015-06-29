@@ -2,6 +2,7 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
+use Dotenv\Dotenv;
 use FastRoute\Dispatcher;
 use Symfony\Component\HttpFoundation\Response;
 use Whoops\Run;
@@ -9,9 +10,11 @@ use Whoops\Handler\PrettyPageHandler;
 use Symfony\Component\HttpFoundation\Request;
 use FastRoute\RouteCollector;
 
-error_reporting(E_ALL);
+$dotenv = new Dotenv(__DIR.'/../');
+$dotenv->load();
 
-$environment = 'development';
+error_reporting(getenv('ERROR_REPORTING'));
+$environment = getenv('ENVIRONMENT');
 
 /**
  * Register the error handler
