@@ -14,4 +14,11 @@ $injector->define('Framework\Http\Request', [
 
 $injector->share('Framework\Http\Response');
 
+$injector->define('League\Plates\Engine', [
+    ':directory' => __DIR__.'/../templates',
+]);
+
+$injector->alias('Framework\Templates\Renderer', 'Framework\Templates\PlatesRenderer');
+
+
 return $injector;
