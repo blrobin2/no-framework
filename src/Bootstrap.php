@@ -26,15 +26,10 @@ if ($environment !== 'production') {
 }
 $whoops->register();
 
-// Pull in all the SUPERGLOBALS into a request object
-$request = Request::createFromGlobals();
+$injector = include 'Dependencies.php';
 
-// Build an empty response that we can modify depending on the circumstances.
-$response = new Response(
-    null,
-    Response::HTTP_OK,
-    array('content-type' => 'text/html')
-);
+$request = $injector->make('Framework\Http\Request');
+$response = $injector->make('Framework\Http\Response');
 
 $routeDefinitionCallback = function (RouteCollector $r) {
     $routes = include('Routes.php');
@@ -60,7 +55,7 @@ switch ($routeInfo[0]) {
         $method = $routeInfo[1][1];
         $vars = $routeInfo[2];
 
-        $class = new $className($response);
+        $class = $injector->make($className);
         $class->$method($vars);
         break;
 }
