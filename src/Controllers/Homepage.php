@@ -24,6 +24,7 @@ class Homepage
     {
         $data = [
             'name' => $this->request->query->get('name', 'Stranger'),
+            'menuItems' => [['href' => '/', 'text' => 'Homepage']],
         ];
 
         $html = $this->renderer->render('home', $data);
