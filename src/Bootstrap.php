@@ -10,7 +10,7 @@ use Whoops\Handler\PrettyPageHandler;
 use Symfony\Component\HttpFoundation\Request;
 use FastRoute\RouteCollector;
 
-$dotenv = new Dotenv(__DIR.'/../');
+$dotenv = new Dotenv(__DIR__.'/../');
 $dotenv->load();
 
 error_reporting(getenv('ERROR_REPORTING'));
