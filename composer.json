@@ -1,0 +1,20 @@
+{
+  "name": "blrobin2/no-framework",
+  "description": "Following Patrick Louys' no-framework-tutorial",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "BT Robinson",
+      "email": "brobinson88@gmail.com",
+      "role": "Tutorial-follower"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Framework\\": "src/"
+    }
+  }
+}
