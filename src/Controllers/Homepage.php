@@ -8,6 +8,7 @@ use Framework\Templates\Renderer;
 
 class Homepage
 {
+
     private $request;
     private $response;
     private $renderer;

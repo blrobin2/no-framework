@@ -19,6 +19,13 @@ $injector->define('League\Plates\Engine', [
 ]);
 
 $injector->alias('Framework\Templates\Renderer', 'Framework\Templates\PlatesRenderer');
+$injector->share('Framework\Templates\PlatesRenderer');
+
+$injector->define('Framework\Page\FilePageReader', [
+    ':pageFolder' => __DIR__.'/../pages',
+]);
+$injector->alias('Framework\Page\PageReader', 'Framework\Page\FilePageReader');
+$injector->share('Framework\Page\FilePageReader');
 
 
 return $injector;
