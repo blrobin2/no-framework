@@ -3,6 +3,7 @@
 namespace Framework\Page;
 
 use InvalidArgumentException;
+use Michelf\Markdown;
 
 class FilePageReader implements PageReader
 {
@@ -30,6 +31,6 @@ class FilePageReader implements PageReader
             throw new InvalidPageException($slug);
         }
 
-        return file_get_contents($path);
+        return Markdown::defaultTransform(file_get_contents($path));
     }
 }

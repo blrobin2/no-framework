@@ -1,5 +1,5 @@
 <?php $this->layout('layout', ['menuItems' => $menuItems]) ?>
 
 <?php $this->start('main') ?>
-    <?= $this->e($content) ?>
+    <?= $content ?>
 <?php $this->stop() ?>
