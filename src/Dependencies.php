@@ -27,5 +27,7 @@ $injector->define('Framework\Page\FilePageReader', [
 $injector->alias('Framework\Page\PageReader', 'Framework\Page\FilePageReader');
 $injector->share('Framework\Page\FilePageReader');
 
+$injector->alias('Framework\Templates\FrontendRenderer', 'Framework\Templates\FrontendPlatesRenderer');
+$injector->share('Framework\Templates\FrontendPlatesRenderer');
 
 return $injector;

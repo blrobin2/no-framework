@@ -12,7 +12,7 @@
             <?php endforeach ?>
         </ul>
     </nav>
-    
+
     <main class="main" role="main">
         <?= $this->section('main') ?>
     </main>
