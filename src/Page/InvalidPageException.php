@@ -2,7 +2,6 @@
 
 namespace Framework\Page;
 
-
 class InvalidPageException extends \Exception
 {
 

@@ -12,7 +12,7 @@ class FilePageReader implements PageReader
 
     public function __construct($pageFolder)
     {
-        if ( ! is_string($pageFolder)) {
+        if (! is_string($pageFolder)) {
             throw new InvalidArgumentException('pageFolder must be a string');
         }
 
@@ -21,13 +21,13 @@ class FilePageReader implements PageReader
 
     public function readBySlug($slug)
     {
-        if ( ! is_string($slug)) {
+        if (! is_string($slug)) {
             throw new InvalidArgumentException('slug must be a string.');
         }
 
         $path = "$this->pageFolder/$slug.md";
 
-        if ( ! file_exists($path)) {
+        if (! file_exists($path)) {
             throw new InvalidPageException($slug);
         }
 

@@ -7,9 +7,9 @@
 <body>
     <nav class="nav" role="navigation">
         <ul>
-            <?php foreach($menuItems as $item): ?>
+            <?php foreach ($menuItems as $item) : ?>
                 <li><a href="<?= $this->e($item['href']) ?>"><?= $this->e($item['text']) ?></a></li>
-            <?php endforeach ?>
+            <?php endforeach; ?>
         </ul>
     </nav>
 

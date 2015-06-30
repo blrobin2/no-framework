@@ -2,4 +2,4 @@
 
 <?php $this->start('main') ?>
     <?= $content ?>
-<?php $this->stop() ?>
+<?php $this->stop();

@@ -2,7 +2,6 @@
 
 namespace Framework\Templates;
 
-
 interface Renderer
 {
 
